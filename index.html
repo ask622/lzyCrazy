@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="vite.svg" type="image/png" />
+  <title>LzyCrazy </title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <img src="lzy_logo-Cl4gUC2f-removebg-preview.png" alt="LzyCrazy Logo" class="logo" />
+      <div class="search-box">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
+      </div>
+      <div class="tags">
+        <button>About Us</button>
+        <button>LzyCrazy Services</button>
+        <button>LzyCrazy Marketplace</button>
+        <button>We Are Hiring</button>
+        <button>LzyCrazy News</button>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <!-- Login Box -->
+      <form class="login-box" id="loginForm">
+        <div class="input-wrapper">
+          <i class="bi bi-envelope icon"></i>
+          <input type="email" placeholder="Email Address" required />
+        </div>
+        <div class="input-wrapper">
+          <i class="bi bi-lock icon"></i>
+          <input type="password" placeholder="Password" required />
+        </div>
+        <a href="#" class="forgot">Forgot Password?</a>
+        <button type="submit" class="login-btn">Login</button>
+
+        <div class="or">or continue with</div>
+
+        <div class="social-buttons">
+          <button class="google"><img src="google.png" alt="Google" /> Google</button>
+          <button class="facebook"><img src="facebook.png" alt="Facebook" /> Facebook</button>
+        </div>
+
+        <button type="button" class="create-account" onclick="showSignup()">Create New Account</button>
+      </form>
+
+      <!-- Signup Box -->
+      <form class="signup-box" id="signupForm" style="display: none;">
+        <div class="input-wrapper">
+          <i class="bi bi-person icon"></i>
+          <input type="text" placeholder="Full Name" required />
+        </div>
+        <div class="input-wrapper">
+          <i class="bi bi-telephone icon"></i>
+          <input type="tel" placeholder="+91" required />
+        </div>
+        <div class="input-wrapper">
+          <i class="bi bi-envelope icon"></i>
+          <input type="email" placeholder="Email Address" required />
+        </div>
+        <div class="input-wrapper">
+          <i class="bi bi-lock icon"></i>
+          <input type="password" placeholder="Password" required />
+        </div>
+
+        <p class="info-text">We may use your contact information to improve your experience. <a href="#">Learn more</a></p>
+        <p class="info-text">By clicking Sign Up, you agree to our <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, and <a href="#">Cookies Policy</a></p>
+
+        <button type="submit" class="login-btn">Signup</button>
+        <p class="toggle-text"><a href="#" onclick="showLogin()">Already have an account?</a></p>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="footer-left">
+    <span>India</span>
+    <span>|</span>
+    <span>LzyCrazy offered in:</span>
+    <span class="lang">हिन्दी</span>
+    <span class="lang">English</span>
+    <span class="lang">বাংলা</span>
+    <span class="lang">العربية</span>
+  </div>
+  <div class="footer-right">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+</footer>
+
+
+  <script>
+    function showSignup() {
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('signupForm').style.display = 'flex';
+    }
+    function showLogin() {
+      document.getElementById('signupForm').style.display = 'none';
+      document.getElementById('loginForm').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
